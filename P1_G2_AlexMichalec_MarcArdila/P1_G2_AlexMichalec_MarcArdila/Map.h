@@ -5,10 +5,11 @@ class Map
 
 {
 	 char **md;
-	 int NUM_ROWS;
-	 int NUM_COLUMNS;
+	
 
 public:
+	int NUM_ROWS;
+	int NUM_COLUMNS;
 	Map();
 	~Map();
 	void startMap();
