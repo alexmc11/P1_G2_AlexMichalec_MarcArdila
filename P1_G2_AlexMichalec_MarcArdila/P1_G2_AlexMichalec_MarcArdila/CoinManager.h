@@ -15,5 +15,8 @@ class CoinManager
 public:
 	CoinManager();
 	~CoinManager();
+	void GenCoins();
+	void CoinPicker();
+
 };
 
