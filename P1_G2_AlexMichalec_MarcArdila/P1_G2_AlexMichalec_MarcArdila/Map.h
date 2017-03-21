@@ -4,8 +4,10 @@ enum difficulty {EASY, MEDIUM, HARD};
 class Map
 
 {
+	 int **md;
+	 int NUM_ROWS;
+	 int NUM_COLUMNS;
 
-	difficulty Dificultad;
 public:
 	Map();
 	~Map();

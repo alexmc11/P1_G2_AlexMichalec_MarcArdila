@@ -1,9 +1,15 @@
 #include "Map.h"
+#include <stdlib.h>
 
 
-
-Map::Map()
+Map::Map() : md(new int*[NUM_ROWS])
 {
+	for (int i = 0; i < NUM_ROWS; i++) {
+
+		md[i] = new int[NUM_COLUMNS];
+	}
+
+	
 }
 
 
