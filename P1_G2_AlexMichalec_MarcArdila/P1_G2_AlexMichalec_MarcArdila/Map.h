@@ -4,8 +4,7 @@ enum difficulty {EASY, MEDIUM, HARD};
 class Map
 
 {
-	int x;
-	char map[5][5 * 2];
+
 	difficulty Dificultad;
 public:
 	Map();
