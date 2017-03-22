@@ -1,4 +1,5 @@
 #pragma once
+#include "Map.h"
 struct coord 
 {
 	int x;
@@ -12,10 +13,10 @@ class Player
 
 
 public:
-	Player();
+	Player(Map m);
 	~Player();
 	void pos();
 	void movement();
-
+	Map &map;
 };
 
