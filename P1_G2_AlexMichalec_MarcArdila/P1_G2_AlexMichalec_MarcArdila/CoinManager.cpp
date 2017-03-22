@@ -15,20 +15,19 @@ CoinManager::~CoinManager()
 {
 }
 
+void CoinManager::GenCoins()
+{
+	while (VisibleCoins > 0)
+	{
+
+	}
+}
+
 void CoinManager::CoinPicker()
 {
 }
 
-void CoinManager::GenCoins()
-{
-	while (VisibleCoins > 0) {
-		//xrand
-		//yrand
-		// miras si hay moneda
-		//si hay moenda nada
-		// si no hay modify y visiblecoins-1
-		
 
-}
+
 
 
