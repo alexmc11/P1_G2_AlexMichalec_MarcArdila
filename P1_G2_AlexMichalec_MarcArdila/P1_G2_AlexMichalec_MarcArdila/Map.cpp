@@ -3,8 +3,12 @@
 #include <iostream>
 
 
-Map::Map() : md(new char*[NUM_ROWS])
+Map::Map(int diff)
 {
+	
+	NUM_ROWS = 5 * diff + rand() % (5 * diff * 2 - 5 * diff);
+	NUM_COLUMNS = 5 * diff + rand() % (5 * diff * 2 - 5 * diff);
+	md = new char*[NUM_ROWS];
 	for (int i = 0; i < NUM_ROWS; i++) {
 
 		md[i] = new char[NUM_COLUMNS];

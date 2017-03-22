@@ -1,4 +1,5 @@
 #pragma once
+#include "Map.h"
 struct Coin
 {
 	int x;
@@ -13,10 +14,11 @@ class CoinManager
 
 
 public:
-	CoinManager();
+	CoinManager(Map a);
 	~CoinManager();
 	void GenCoins();
 	void CoinPicker();
+	Map &mapa;
 
 };
 
