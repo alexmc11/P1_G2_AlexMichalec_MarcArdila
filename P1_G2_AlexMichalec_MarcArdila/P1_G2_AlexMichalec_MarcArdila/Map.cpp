@@ -13,6 +13,12 @@ Map::Map(int diff)
 
 		md[i] = new char[NUM_COLUMNS];
 	}
+	for (int i = 0; i < NUM_ROWS; i++) {
+		for (int j = 0; j < NUM_COLUMNS; j++)
+		{
+			md[i][j] = '.';
+		}
+	}
 
 	
 }
@@ -22,15 +28,7 @@ Map::~Map()
 {
 }
 
-void Map::startMap()
-{
-	for (int i = 0; i < NUM_ROWS; i++) {
-		for (int j = 0; j < NUM_COLUMNS; j++)
-		{
-			md[i][j] = '.';
-		}
-	}
-}
+
 
 void Map::Modify(int column, int row, char newc)
 {
@@ -47,5 +45,6 @@ void Map::printMap()
 
 			std::cout << md[i][j];
 		}
+		std::cout << std::endl;
 	}
 }
