@@ -1,10 +1,12 @@
 #include "CoinManager.h"
+#include "Player.h"
 #include <stdlib.h>
 
 
 int coinrand;
 
 class Map;
+class Player;
 
 CoinManager::CoinManager(Map a): mapa(a)
 {
@@ -22,7 +24,7 @@ void CoinManager::GenCoins()
 	{
 		coins.x = rand() % mapa.NUM_ROWS;
 		coins.y = rand() % mapa.NUM_COLUMNS;
-		if (mapa.md[coins.x][coins.y] != '$') {
+		if (mapa.md[coins.x][coins.y] != '$' && mapa.md[coins.x][coins.y] != '@') {
 			mapa.Modify(coins.y, coins.x, '$');
 			VisibleCoins--;
 		}
@@ -30,10 +32,14 @@ void CoinManager::GenCoins()
 	
 }
 
-void CoinManager::CoinPicker()
+void CoinManager::CoinPicker(Player & player)
 {
-
+	if (VisibleCoins < 0)
+		mapa.Modify(player.Coords.x, player.Coords.y, '@');
+	else
+		GenCoins();
 }
+
 
 
 

@@ -8,7 +8,6 @@ struct coord
 
 class Player
 {
-	coord Coords;
 	int points;
 
 
@@ -18,5 +17,6 @@ public:
 	void pos();
 	void movement();
 	Map &map;
+	coord Coords;
 };
 

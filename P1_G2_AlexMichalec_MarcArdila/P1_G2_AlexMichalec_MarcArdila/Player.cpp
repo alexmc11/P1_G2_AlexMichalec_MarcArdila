@@ -15,12 +15,17 @@ Player::~Player()
 
 void Player::pos()
 {
-	do {
-		Coords.x = rand() % map.NUM_ROWS;
-		Coords.y = rand() % map.NUM_COLUMNS;
+	Coords.x = rand() % map.NUM_ROWS;
+	Coords.y = rand() % map.NUM_COLUMNS;
+	if (map.md[Coords.x][Coords.y] == '$')
+	{
+		while (map.md[Coords.x][Coords.y] == '$') {
+			Coords.x = rand() % map.NUM_ROWS;
+			Coords.y = rand() % map.NUM_COLUMNS;
+		}
+	}
+	else
 		map.md[Coords.x][Coords.y] = Pj;
-	} while (map.md[Coords.x][Coords.y] = '$');
-		
 }
 
 void Player::movement()

@@ -5,11 +5,14 @@
 #include "Input.h"
 #include <conio.h>
 #include <iostream>
+#include <time.h>
+
 
 
 
 void main() {
 	int dificultad;
+	srand(time(NULL));
 
 	std::cout <<"////////////////////////////////////////////////////////////////////////////////////" << std::endl;
 	std::cout <<"////////////////////////////////////////////////////////////////////////////////////" << std::endl;
@@ -24,9 +27,20 @@ void main() {
 
 	std::cout << "INTRODUCE LA DIFICULTAD (1 PARA EASY, 2 PARA MEDIUM, 3 PARA HARD)" << std::endl;
 	std::cin >> dificultad;
+
+	//CONSTRUCTORES CLASES//
+
 	Map mapa(dificultad);
 	//CoinManager CoinM(mapa);
+	Player player(mapa);
+
+	//FUNCIONES LOOP DE JUEGO//
+
+	//CoinManager CoinM(mapa);
+	Player player(mapa);
 	//CoinM.GenCoins();
+	//CoinM.CoinPicker();
+	player.pos();
 	mapa.printMap();
 }
 

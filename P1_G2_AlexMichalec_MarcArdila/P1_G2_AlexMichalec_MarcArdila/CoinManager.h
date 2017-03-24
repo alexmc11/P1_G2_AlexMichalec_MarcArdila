@@ -17,7 +17,7 @@ public:
 	CoinManager(Map a);
 	~CoinManager();
 	void GenCoins();
-	void CoinPicker();
+	void CoinPicker(Player &player);
 	Map &mapa;
 
 };
