@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include "Input.h"
+#include "Map.h"
 
 char Pj = '@';
 
@@ -29,7 +30,10 @@ void Player::pos()
 		map.md[Coords.x][Coords.y] = Pj;
 }
 
-void Player::movement()
+/*void Player::movement()
 {
-	
-}
+	switch (Input::getKey())
+	{
+	case  
+	}
+}*/

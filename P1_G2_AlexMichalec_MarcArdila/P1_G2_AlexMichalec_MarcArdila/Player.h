@@ -1,5 +1,7 @@
 #pragma once
 #include "Map.h"
+#include <conio.h>
+#include "Input.h"
 struct coord 
 {
 	int x;
@@ -18,5 +20,6 @@ public:
 	void movement();
 	Map &map;
 	coord Coords;
+	
 };
 
