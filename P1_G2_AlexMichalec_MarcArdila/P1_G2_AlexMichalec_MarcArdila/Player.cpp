@@ -30,9 +30,9 @@ void Player::pos()
 		map.md[Coords.x][Coords.y] = Pj;
 }
 
-/*void Player::movement()
+void Player::movement(Input::Key tecla)
 {
-	switch (Input::getKey())
+	switch (tecla)
 	{
 	case Input::Key::NONE:
 		break;
