@@ -33,7 +33,7 @@ void CoinManager::GenCoins()
 
 void CoinManager::CoinPicker(Player & player)
 {
-	if (VisibleCoins > 0)
+	if (VisibleCoins < 0)
 		mapa.Modify(player.Coords.x, player.Coords.y, '@');
 	else
 		GenCoins();
