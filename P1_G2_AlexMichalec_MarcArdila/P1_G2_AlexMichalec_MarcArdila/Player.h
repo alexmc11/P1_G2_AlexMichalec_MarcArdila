@@ -17,7 +17,7 @@ public:
 	Player(Map m);
 	~Player();
 	void pos();
-	void movement();
+	void movement(Input::Key tecla);
 	Map &map;
 	coord Coords;
 	

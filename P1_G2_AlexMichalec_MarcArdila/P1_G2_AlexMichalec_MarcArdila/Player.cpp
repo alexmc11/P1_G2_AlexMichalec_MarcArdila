@@ -43,10 +43,22 @@ void Player::movement(Input::Key tecla)
 		}
 		break;
 	case Input::Key::A:
+		if (Coords.x != 0) {
+
+			Coords.x++;
+		}
 		break;
 	case Input::Key::S:
+		if (Coords.y != 0) {
+
+			Coords.y++;
+		}
 		break;
 	case Input::Key::D:
+		if (Coords.y != 0) {
+
+			Coords.x--;
+		}
 		break;
 	case Input::Key::ENTER:
 		break;
@@ -56,3 +68,4 @@ void Player::movement(Input::Key tecla)
 		break;
 	}
 }
+
