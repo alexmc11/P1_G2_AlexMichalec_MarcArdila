@@ -11,9 +11,13 @@
 
 
 void main() {
+	
 	int dificultad;
+	//Input::Key Tecla;
+	//int puntuacion;
 	srand(time(NULL));
-
+	//int numMonedas = 30 * dificultad + rand() % (30 * dificultad * 2 - 30 * dificultad);
+	
 	std::cout <<"////////////////////////////////////////////////////////////////////////////////////" << std::endl;
 	std::cout <<"////////////////////////////////////////////////////////////////////////////////////" << std::endl;
 	std::cout <<"////////////////////////////////////////////////////////////////////////////////////" << std::endl;
@@ -34,9 +38,12 @@ void main() {
 	CoinManager CoinM(mapa);
 	Player player(mapa);
 
-	//FUNCIONES LOOP DE JUEGO//
+	//LOOP DE JUEGO//
 
-	
+	//while (puntuacion != numMonedas) 
+	//{
+		
+	//}
 	
 	CoinM.GenCoins();
 	//CoinM.CoinPicker();

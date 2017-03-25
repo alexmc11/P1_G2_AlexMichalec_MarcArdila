@@ -2,7 +2,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include "Input.h"
-
+#include "Map.h"
 
 char Pj = '@';
 
@@ -30,9 +30,9 @@ void Player::pos()
 		map.md[Coords.x][Coords.y] = Pj;
 }
 
-void Player::movement(Input::Key tecla)
+/*void Player::movement()
 {
-	switch (tecla)
+	switch (Input::getKey())
 	{
 	case Input::Key::NONE:
 		break;
