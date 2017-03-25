@@ -5,6 +5,7 @@
 
 char Pj = '@';
 
+
 Player::Player(Map m): map(m)
 {
 }
@@ -30,5 +31,5 @@ void Player::pos()
 
 void Player::movement()
 {
-
+	
 }

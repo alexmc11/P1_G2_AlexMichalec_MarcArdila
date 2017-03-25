@@ -31,14 +31,14 @@ void main() {
 	//CONSTRUCTORES CLASES//
 
 	Map mapa(dificultad);
-	//CoinManager CoinM(mapa);
+	CoinManager CoinM(mapa);
 	Player player(mapa);
 
 	//FUNCIONES LOOP DE JUEGO//
 
-	//CoinManager CoinM(mapa);
 	
-	//CoinM.GenCoins();
+	
+	CoinM.GenCoins();
 	//CoinM.CoinPicker();
 	player.pos();
 	mapa.printMap();

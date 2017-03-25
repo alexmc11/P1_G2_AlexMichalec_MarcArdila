@@ -10,7 +10,7 @@ class Player;
 
 CoinManager::CoinManager(Map a): mapa(a)
 {
-	VisibleCoins = ((3/100) * (mapa.NUM_COLUMNS * mapa.NUM_ROWS)) + rand() % (((13/100)*(mapa.NUM_ROWS * mapa.NUM_COLUMNS)) - ((3 / 100) * (mapa.NUM_COLUMNS * mapa.NUM_ROWS)));
+	VisibleCoins = ((3 * (mapa.NUM_COLUMNS * mapa.NUM_ROWS)) / 100) + (rand() % ((13 * (mapa.NUM_COLUMNS * mapa.NUM_ROWS)) / 100) - ((3 * (mapa.NUM_COLUMNS * mapa.NUM_ROWS)) / 100));
 }
 
 
