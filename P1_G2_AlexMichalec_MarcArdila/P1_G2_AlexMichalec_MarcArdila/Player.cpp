@@ -60,7 +60,10 @@ void Player::movement(Input::Key tecla)
 			Coords.x--;
 		}
 		break;
-	
+	case Input::Key::ENTER:
+		break;
+	case Input::Key::ESC:
+		break;
 	default:
 		break;
 	}
