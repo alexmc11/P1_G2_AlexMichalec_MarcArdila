@@ -6,6 +6,7 @@
 #include <conio.h>
 #include <iostream>
 #include <time.h>
+#include <cstdlib>
 
 
 
@@ -13,10 +14,10 @@
 void main() {
 	
 	int dificultad;
-	//Input::Key Tecla;
-	//int puntuacion;
+	Input::Key Tecla;
+	int puntuacion = 0;
 	srand(time(NULL));
-	//int numMonedas = 30 * dificultad + rand() % (30 * dificultad * 2 - 30 * dificultad);
+	
 	
 	std::cout <<"////////////////////////////////////////////////////////////////////////////////////" << std::endl;
 	std::cout <<"////////////////////////////////////////////////////////////////////////////////////" << std::endl;
@@ -31,22 +32,31 @@ void main() {
 
 	std::cout << "INTRODUCE LA DIFICULTAD (1 PARA EASY, 2 PARA MEDIUM, 3 PARA HARD)" << std::endl;
 	std::cin >> dificultad;
-
+	int numMonedas = 30 * dificultad + rand() % (30 * dificultad * 2 - 30 * dificultad);
 	//CONSTRUCTORES CLASES//
 
 	Map mapa(dificultad);
 	CoinManager CoinM(mapa);
 	Player player(mapa);
+	player.pos();
+	CoinM.GenCoins();
+	system("cls");
+	
 
 	//LOOP DE JUEGO//
 
-	//while (puntuacion != numMonedas) 
-	//{
+	while (puntuacion != numMonedas) 
+	{
 		
-	//}
+		Tecla == Input::getKey();
+			player.movement(Tecla);
+			mapa.printMap();
+			system("cls");
+		}
+	}
 	
-	CoinM.GenCoins();
+	
 	//CoinM.CoinPicker();
-	player.pos();
-	mapa.printMap();
+	
+	
 }
