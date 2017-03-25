@@ -1,5 +1,6 @@
 #pragma once
 #include "Map.h"
+#include "Player.h"
 struct Coin
 {
 	int x;

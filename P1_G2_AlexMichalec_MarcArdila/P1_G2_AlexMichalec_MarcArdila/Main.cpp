@@ -37,11 +37,9 @@ void main() {
 	//FUNCIONES LOOP DE JUEGO//
 
 	//CoinManager CoinM(mapa);
-	Player player(mapa);
+	
 	//CoinM.GenCoins();
 	//CoinM.CoinPicker();
 	player.pos();
 	mapa.printMap();
 }
-
-
