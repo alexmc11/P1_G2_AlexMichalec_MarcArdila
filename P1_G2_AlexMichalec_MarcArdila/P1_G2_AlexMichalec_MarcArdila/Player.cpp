@@ -37,23 +37,37 @@ void Player::movement(Input::Key tecla)
 	case Input::Key::NONE:
 		break;
 	case Input::Key::W:
-		if (Coords.y != 0) {
-			
+		if (Coords.y > 0) {
+
+			if (map.md[Coords.x][Coords.y - 1] == '$')
+			{
+				points++;
+				//manager.VisibleCoins--;
+			}
 			Coords.y--;
 			map.Modify(Coords.x, Coords.y, '@');
 			map.Modify(Coords.x, Coords.y+1, '.');
 		}
 		break;
 	case Input::Key::A:
-		if (Coords.x != 0) {
-
+		if (Coords.x > 0) {
+			if (map.md[Coords.x - 1][Coords.y] == '$')
+			{
+				points++;
+				//manager.VisibleCoins--;
+			}
 			Coords.x--;
 			map.Modify(Coords.x, Coords.y, '@');
 			map.Modify(Coords.x+1, Coords.y, '.');
 		}
 		break;
 	case Input::Key::S:
-		if (Coords.y != 0) {
+		if (Coords.y < (map.NUM_ROWS - 1)) {
+			if (map.md[Coords.x][Coords.y + 1] == '$')
+			{
+				points++;
+				//manager.VisibleCoins--;
+			}
 
 			Coords.y++;
 			map.Modify(Coords.x, Coords.y, '@');
@@ -61,8 +75,13 @@ void Player::movement(Input::Key tecla)
 		}
 		break;
 	case Input::Key::D:
-		if (Coords.y != 0) {
-
+		if (Coords.x < (map.NUM_COLUMNS - 1)) {
+			
+			if (map.md[Coords.x+1][Coords.y] == '$')
+			{
+				points++;
+				//manager.VisibleCoins--;
+			}
 			Coords.x++;
 			map.Modify(Coords.x, Coords.y, '@');
 			map.Modify(Coords.x-1, Coords.y, '.');
