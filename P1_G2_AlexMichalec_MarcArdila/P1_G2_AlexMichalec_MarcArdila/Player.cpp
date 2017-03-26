@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "Input.h"
 #include "Map.h"
+#include "CoinManager.h"
 
 char Pj = '@';
 
@@ -26,8 +27,7 @@ void Player::pos()
 			Coords.y = rand() % map.NUM_COLUMNS;
 		}
 	}
-	else
-		map.md[Coords.x][Coords.y] = Pj;
+
 }
 
 void Player::movement(Input::Key tecla)
@@ -38,26 +38,34 @@ void Player::movement(Input::Key tecla)
 		break;
 	case Input::Key::W:
 		if (Coords.y != 0) {
-
+			
 			Coords.y--;
+			map.Modify(Coords.x, Coords.y, '@');
+			map.Modify(Coords.x, Coords.y+1, '.');
 		}
 		break;
 	case Input::Key::A:
 		if (Coords.x != 0) {
 
-			Coords.x++;
+			Coords.x--;
+			map.Modify(Coords.x, Coords.y, '@');
+			map.Modify(Coords.x+1, Coords.y, '.');
 		}
 		break;
 	case Input::Key::S:
 		if (Coords.y != 0) {
 
 			Coords.y++;
+			map.Modify(Coords.x, Coords.y, '@');
+			map.Modify(Coords.x, Coords.y-1, '.');
 		}
 		break;
 	case Input::Key::D:
 		if (Coords.y != 0) {
 
-			Coords.x--;
+			Coords.x++;
+			map.Modify(Coords.x, Coords.y, '@');
+			map.Modify(Coords.x-1, Coords.y, '.');
 		}
 		break;
 
