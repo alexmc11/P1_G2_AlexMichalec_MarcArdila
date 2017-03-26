@@ -14,7 +14,6 @@ class CoinManager
 	Coin coins;
 	int TotalCoins;
 
-
 public:
 	CoinManager(Map a);
 	~CoinManager();

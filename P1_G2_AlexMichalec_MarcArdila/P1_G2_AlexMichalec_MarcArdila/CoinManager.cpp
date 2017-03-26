@@ -29,8 +29,9 @@ void CoinManager::GenCoins()
 			mapa.Modify(coins.y, coins.x, '$');
 			VisibleCoins--;
 		}
-
+	
 	}
+
 	
 
 
