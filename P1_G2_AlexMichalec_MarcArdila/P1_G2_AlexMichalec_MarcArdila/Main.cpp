@@ -45,18 +45,9 @@ void main() {
 
 	//LOOP DE JUEGO//
 
-	while (puntuacion != numMonedas) 
-	{
-		
-		Tecla == Input::getKey();
-			player.movement(Tecla);
-			mapa.printMap();
-			system("cls");
-		}
-	}
+
 	
 	
 	//CoinM.CoinPicker();
 	
 	
-}

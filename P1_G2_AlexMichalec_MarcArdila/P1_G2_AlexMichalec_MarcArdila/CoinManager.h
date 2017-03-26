@@ -12,6 +12,7 @@ class CoinManager
 
 	int VisibleCoins;
 	Coin coins;
+	int TotalCoins;
 
 
 public:
